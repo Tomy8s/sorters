@@ -30,29 +30,28 @@ describe Jumbler do
           expect(i).to be >= min
         end
       end
+    end
 
-      context 'given erroneous params' do
-        it 'throws an error for length less than 1' do
-          expect{ subject.class.jumble(-1) }.to raise_error ArgumentError
-        end
+    context 'given erroneous params' do
+      it 'throws an error for length less than 1' do
+        expect{ subject.class.jumble(-1) }.to raise_error ArgumentError
+      end
 
-        it 'throws an error for length not Fixnum' do
-          expect{ subject.class.jumble('hello') }.to raise_error ArgumentError
-        end
+      it 'throws an error for length not Fixnum' do
+        expect{ subject.class.jumble('hello') }.to raise_error ArgumentError
+      end
 
-        it 'throws an error for min not Fixnum' do
-          expect{ subject.class.jumble(100, 'hello') }.to raise_error ArgumentError
-        end
+      it 'throws an error for min not Fixnum' do
+        expect{ subject.class.jumble(100, 'hello') }.to raise_error ArgumentError
+      end
 
-        it 'throws an error for max not Fixnum' do
-          expect{ subject.class.jumble(100, -100, 'hello') }.to raise_error ArgumentError
-        end
+      it 'throws an error for max not Fixnum' do
+        expect{ subject.class.jumble(100, -100, 'hello') }.to raise_error ArgumentError
+      end
 
-        it 'throws an error if min is more than max' do
-          expect{ subject.class.jumble(100, 100, -100) }.to raise_error ArgumentError
-        end
+      it 'throws an error if min is more than max' do
+        expect{ subject.class.jumble(100, 100, -100) }.to raise_error ArgumentError
       end
     end
-    
   end
 end
