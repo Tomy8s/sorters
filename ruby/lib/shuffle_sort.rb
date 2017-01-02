@@ -1,11 +1,9 @@
 class ShuffleSort
-  def self.mysort(arr)
+  def self.my_sort(arr)
     loops = 0
-    # print 'Loop ' + loops.to_s + ' ' + arr.to_s + "\n"
-    until arr == arr.sort || loop == 1000
+    until arr == arr.sort
       loops += 1
       arr = arr.shuffle
-      # print 'Loop ' + loops.to_s + ' ' + arr.to_s + "\n"
     end
     loops
   end

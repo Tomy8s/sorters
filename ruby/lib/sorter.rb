@@ -20,7 +20,7 @@ class Sorter
 
   def shuffle_sort
     results = []
-    reps.times { results << ShuffleSort.mysort(arr) }
+    reps.times { results << ShuffleSort.my_sort(arr) }
     return_results results
   end
 
